@@ -1,13 +1,15 @@
+import Box from "@mui/material/Box";
 import CssBaseline from "@mui/material/CssBaseline";
-import Button from "@mui/material/Button";
+import { ThemeProvider } from "@mui/material/styles";
+import theme from "./theme";
 
 function App() {
   return (
     <>
       <CssBaseline />
-      <Button variant="contained" onClick={() => console.log("Hello!")}>
-        Hello world
-      </Button>
+      <ThemeProvider theme={theme}>
+        <Box sx={{ color: theme.palette.primary.light }}>Hi</Box>
+      </ThemeProvider>
     </>
   );
 }
